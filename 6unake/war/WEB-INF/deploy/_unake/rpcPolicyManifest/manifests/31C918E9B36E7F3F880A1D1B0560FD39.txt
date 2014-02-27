@@ -1,0 +1,2 @@
+serviceClass: oun.client.GreetingService
+path: E51D323B7CDA8F103B02A5BBDD3749FD.gwt.rpc
