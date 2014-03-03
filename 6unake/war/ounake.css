@@ -17,7 +17,7 @@
 body {
 	margin: 0; 	padding: 0;
 	font: normal 12px/1.7em  verdana, tahoma, sans-serif;	 
-	text-align: center;
+	text-align: left;
 	background: #001342 url(headerbg.jpg) repeat-x 0 0;
 	color: #F2F9FF;
 }
@@ -55,29 +55,17 @@ ul, ol {
 }
 
 /* images */
-img {
-	background: #FAFAFA;
-   border: 1px solid #0F7ACC;
-	padding: 6px;
-}
-img.float-right {
-   margin: .5em 0 1em 1em;   
-}
-img.float-left {
-   margin: .5em 1em 1em 0;
+img.raamat {
+	border: none; 
+	padding: 0 0 5px 0;
+	margin: .5em 1em 1em 0;
+	background: transparent;
+	float: left;
+	width: 100px;
+    height: auto;
 }
 
-code {
-  margin: .5em 0;
-  display: block;
-  padding: 20px;
-  text-align: left; 
-  overflow: auto;  
-  font: 500 1em/1.5em 'Lucida Console', 'Courier New', monospace ;
-  /* white-space: pre; */
-  background: #1E89DC;
-  border: 1px solid #0065C6;   
-}
+
 acronym {
   cursor: help;
   border-bottom: 1px solid #0065C6;
@@ -90,45 +78,17 @@ blockquote {
   	font: bold 1.3em/1.5em "Century Gothic", "Trebuchet MS", Helvetica, Arial, Geneva, sans-serif;
 }
 
-/* start - table */
-table {
-	margin: 10px 15px; 
-	border-collapse: collapse;			
+/* kerimisriba */
+kerimisriba{
+	float:left;
+	width:1000px;
+	overflow-y: auto;
+	height: 100px;
 }
-th strong {
-	color: #fff;
+
+hr{
+width: 2px;
 }
-th {
-	background: #93BC0C;
-	height: 3em;
-	padding-left: 12px;
-	padding-right: 12px;
-	color: #FFF;
-	text-align: left;
-	border-left: 1px solid #B6D59A;
-	border-bottom: solid 2px #8EB200; 
-	border-top: solid 2px #8EB200;
-}
-tr {
-	color: #707070;
-	height: 2.5em;	
-}
-td {
-	padding-left: 12px;
-	padding-right: 12px;
-	border-left: 1px solid #FFF;
-	border-bottom: solid 1px #ffffff;
-}
-td.first,th.first {
-	border-left: 0px;
-}
-tr.row-a {
-	background: #F8F8F8;
-}
-tr.row-b {
-	background: #EFEFEF;
-}
-/* end - table */
 
 /* form elements */
 form {
@@ -175,7 +135,8 @@ input.button {
 .searchform {
 	background-color: transparent;
 	border: none;	
-	margin: 0 0 0 10px; padding: 0 0 1.5em 0;	
+	margin: 0 0 0 10px; 
+	padding: 0 0 1.5em 0;	
 	width: 18em;	
 }
 .searchform p { margin: 0; padding: 0; }
@@ -210,7 +171,8 @@ can turn it into a fixed width layout by setting a pixel value to the width (e.g
 	margin: 10px 0;	
 	padding: 10px 10px 20px 10px;		
 	border: 5px solid #1F8ADE;
-	background: url(boxbg.jpg);		
+	background: url(boxbg.jpg);	
+	overflow-x: auto;	
 }
 
 /* header */
@@ -263,18 +225,34 @@ can turn it into a fixed width layout by setting a pixel value to the width (e.g
 }
 
 
-/* Navigation */
+/* Menüü (pea) */
 #nav-wrap {
 	float: left;
 	width: 100%;
 	background: url(menubg.jpg) repeat-x left bottom; 
 	clear: both;
 }
+
+/* Menüü (alam) */
+#nav-wrapsub {
+	float: left;
+	width: 100%;
+	background: url(submenubg.jpg) repeat-x left bottom; 
+	clear: both;
+}
+
 #nav {
 	clear: both;	
 	margin: 0 auto;
 	padding: 0;		
 }
+
+#nav-sub {
+	clear: both;	
+	margin: 0 auto;
+	padding: 0;		
+}
+
 #nav ul {
 	float: left;
 	list-style: none;
@@ -305,6 +283,10 @@ can turn it into a fixed width layout by setting a pixel value to the width (e.g
 }
 #nav ul li#current {	
 	background: url(nav-current.jpg) no-repeat center bottom;		
+}
+/* Alammenüü, näitab mis on valitud */
+#nav ul li#currentsub {	
+	background: url(nav-currentsub.jpg) no-repeat center bottom;		
 }
 #nav ul li#current a {
 	color: #333;
@@ -417,36 +399,6 @@ can turn it into a fixed width layout by setting a pixel value to the width (e.g
 	text-transform: none;
 }
 
-/* footer columns */
-#footer-columns {
-	color: #5B9CFF;
-	margin: 0 auto; 
-	padding: 0;	
-	width: 90%;	
-}
-#footer-columns ul {
-	list-style: none;
-	margin: 10px 0 0 0; 
-	padding: 0;	
-	background: url(footer-dots.jpg) repeat-x left top;	
-}
-#footer-columns li {
-	background: url(footer-dots.jpg) repeat-x left bottom;		
-}
-#footer-columns li a {
-	display: block;
-	font-weight: normal;
-	padding: .5em 0 .5em 1em;
-	width: 96%;
-}
-#footer-columns .col3, .col3-center {
-	float: left;
-	width: 32%;
-}
-#footer-columns .col3-center { 
-	margin: 0 15px; 
-}
-
 /* bottom */
 #footer-bottom {
 	clear: both;
@@ -466,11 +418,7 @@ can turn it into a fixed width layout by setting a pixel value to the width (e.g
 .clear { clear: both; }
 .white {	color: #E8F4FF; }
 
-img.rssfeed {
-	border: none; 
-	padding: 0 0 5px 0;
-	background: transparent;
-}
+
 
 .post-by {
 	font-size: .95em;	
