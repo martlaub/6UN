@@ -234,34 +234,18 @@ can turn it into a fixed width layout by setting a pixel value to the width (e.g
 }
 
 
-/* Men�� (pea) */
+/* Menu */
 #nav-wrap {
 	float: left;
 	width: 100%;
 	background: url(images/menubg.jpg) repeat-x left bottom; 
 	clear: both;
 }
-
-/* Men�� (alam) */
-#nav-wrapsub {
-	float: left;
-	width: 100%;
-	background: url(images/submenubg.jpg) repeat-x left bottom; 
-	clear: both;
-}
-
 #nav {
 	clear: both;	
 	margin: 0 auto;
 	padding: 0;		
 }
-
-#nav-sub {
-	clear: both;	
-	margin: 0 auto;
-	padding: 0;		
-}
-
 #nav ul {
 	float: left;
 	list-style: none;
@@ -293,11 +277,49 @@ can turn it into a fixed width layout by setting a pixel value to the width (e.g
 #nav ul li#current {	
 	background: url(images/nav-current.jpg) no-repeat center bottom;		
 }
-/* Alammen��, n�itab mis on valitud */
-#nav ul li#currentsub {	
+#nav ul li#current a {
+	color: #333;
+}
+
+/* Submenu */
+#nav-wrapsub {
+	float: left;
+	width: 100%;
+	background: url(images/submenubg.jpg) repeat-x left bottom; 
+	clear: both;
+}
+#nav-sub {
+	clear: both;	
+	margin: 0 auto;
+	padding: 0;		
+}
+#nav-sub ul li#currentsub {	
 	background: url(images/nav-currentsub.jpg) no-repeat center bottom;		
 }
-#nav ul li#current a {
+#nav-sub ul {
+	float: left;
+	list-style: none;
+	text-transform: uppercase;
+	margin: 0;
+	padding: 0;	
+	height: 64px;		
+}
+#nav-sub ul li a {
+	display: block;
+	float: left;
+	width: auto;
+	margin: 0;
+	padding: 0 15px;
+	color: #FFF;
+	font: bold 15px "Century Gothic", "Trebuchet MS", Helvetica, Arial, Geneva, sans-serif;
+	text-decoration: none;	
+	letter-spacing: 1px;	
+}
+#nav-sub ul li a:hover, 
+#nav-sub ul li a:active {
+	color: #333;	
+}
+#nav-sub ul li#currentsub a {
 	color: #333;
 }
 
