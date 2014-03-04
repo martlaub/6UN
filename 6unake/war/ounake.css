@@ -18,7 +18,7 @@ body {
 	margin: 0; 	padding: 0;
 	font: normal 12px/1.7em  verdana, tahoma, sans-serif;	 
 	text-align: left;
-	background: #001342 url(headerbg.jpg) repeat-x 0 0;
+	background: #001342 url(images/headerbg.jpg) repeat-x 0 0;
 	color: #F2F9FF;
 }
 
@@ -62,6 +62,15 @@ img.raamat {
 	background: transparent;
 	float: left;
 	width: 100px;
+    height: auto;
+}
+
+img.cookbook {
+	border: none; 
+	padding: 0 0 5px 0;
+	margin: .5em 1em 1em 0;
+	background: transparent;
+	float: left;
     height: auto;
 }
 
@@ -225,19 +234,19 @@ can turn it into a fixed width layout by setting a pixel value to the width (e.g
 }
 
 
-/* Menüü (pea) */
+/* Menï¿½ï¿½ (pea) */
 #nav-wrap {
 	float: left;
 	width: 100%;
-	background: url(menubg.jpg) repeat-x left bottom; 
+	background: url(images/menubg.jpg) repeat-x left bottom; 
 	clear: both;
 }
 
-/* Menüü (alam) */
+/* Menï¿½ï¿½ (alam) */
 #nav-wrapsub {
 	float: left;
 	width: 100%;
-	background: url(submenubg.jpg) repeat-x left bottom; 
+	background: url(images/submenubg.jpg) repeat-x left bottom; 
 	clear: both;
 }
 
@@ -282,11 +291,11 @@ can turn it into a fixed width layout by setting a pixel value to the width (e.g
 	color: #333;	
 }
 #nav ul li#current {	
-	background: url(nav-current.jpg) no-repeat center bottom;		
+	background: url(images/nav-current.jpg) no-repeat center bottom;		
 }
-/* Alammenüü, näitab mis on valitud */
+/* Alammenï¿½ï¿½, nï¿½itab mis on valitud */
 #nav ul li#currentsub {	
-	background: url(nav-currentsub.jpg) no-repeat center bottom;		
+	background: url(images/nav-currentsub.jpg) no-repeat center bottom;		
 }
 #nav ul li#current a {
 	color: #333;
@@ -324,7 +333,7 @@ can turn it into a fixed width layout by setting a pixel value to the width (e.g
 }
 #sidebar ul.sidemenu li {
 	padding: 0; 
-	background: url(sidebullet.gif) no-repeat .3em .5em;		
+	background: url(images/sidebullet.gif) no-repeat .3em .5em;		
 }
 
 * html body #sidebar ul.sidemenu li { height: 1%; }
@@ -339,7 +348,7 @@ can turn it into a fixed width layout by setting a pixel value to the width (e.g
 	font-size: 1.35em;
 }
 #sidebar ul.sidemenu li a:hover {
-	background: #0F7ACC url(sidebullet.gif) no-repeat .25em .45em;	
+	background: #0F7ACC url(images/sidebullet.gif) no-repeat .25em .45em;	
 	color: #FFF;			
 }
 #sidebar ul.sidemenu ul{
@@ -349,10 +358,10 @@ can turn it into a fixed width layout by setting a pixel value to the width (e.g
 #sidebar .sidebox {
 	margin: 5px 15px 5px 0;
 	padding: 0;
-	background: url(sidebarsep.jpg) repeat-x left bottom;
+	background: url(images/sidebarsep.jpg) repeat-x left bottom;
 }
 #sidebar .sep{
-	background: url(sidebarsep.jpg) repeat-x left bottom;
+	background: url(images/sidebarsep.jpg) repeat-x left bottom;
 	height: 2px;
 	margin: 0px 15px 10px 0;
 	clear: both;
