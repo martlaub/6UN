@@ -2,7 +2,7 @@
 window.fbAsyncInit = function() {
   FB.init({
     appId      : '223636477840164',
-    channelUrl : 'http://1-dot-6unapp.appspot.com/pealeht.html', // Channel File
+    channelUrl : 'http://1-dot-6unapp.appspot.com/', // Channel File
     status     : true, // check login status
     cookie     : true, // enable cookies to allow the server to access the session
     xfbml      : true  // parse XFBML
