@@ -293,6 +293,11 @@ can turn it into a fixed width layout by setting a pixel value to the width (e.g
 	margin: 0 auto;
 	padding: 0;		
 }
+#nav-sub ul li {
+	float: left;
+	margin: 0; padding: 0;
+	height: 64px;
+}
 #nav-sub ul li#currentsub {	
 	background: url(images/nav-currentsub.jpg) no-repeat center bottom;		
 }
