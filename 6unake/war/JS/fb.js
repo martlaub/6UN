@@ -13,7 +13,7 @@ window.fbAsyncInit = function() {
       window.top.location = 'http://6unapp.appspot.com/pealeht_enne.html'
     });
   
-  FB.Event.subscribe("auth.login", function() {
+  FB.Event.subscribe("auth.login", function() { 
       window.top.location = 'http://6unapp.appspot.com/pealeht.html'
     });
    
