@@ -2,12 +2,22 @@
 window.fbAsyncInit = function() {
   FB.init({
     appId      : '223636477840164',
-    channelUrl : 'http://1-dot-6unapp.appspot.com/', // Channel File
+    channelUrl : 'http://6unapp.appspot.com/', // Channel File
     status     : true, // check login status
     cookie     : true, // enable cookies to allow the server to access the session
-    xfbml      : true  // parse XFBML
+    xfbml      : true,  // parse XFBML
+    oauth      : true
   });
   
+  FB.Event.subscribe("auth.logout", function() {
+      window.top.location = 'http://6unapp.appspot.com/pealeht_enne.html'
+    });
+  
+  FB.Event.subscribe("auth.login", function() {
+      window.top.location = 'http://6unapp.appspot.com/pealeht.html'
+    });
+   
+   
 //Facebook Login
   FB.Event.subscribe('auth.authResponseChange', function(response) { 
 	    if (response.status === 'connected') {
