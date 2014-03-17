@@ -3,15 +3,15 @@
 <head>
 <meta name="Description" content="Information architecture, Web Design, Web Standards." />
 <meta name="Keywords" content="your, keywords" />
-<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 <meta name="Distribution" content="Global" />
-<meta name="Author" content="Erwin Aligam - ealigam@gmail.com" />
 <meta name="Robots" content="index,follow" />
 
 <link rel="stylesheet" href="ounake.css" type="text/css" />
 
 <script type="text/javascript" src="/JS/jquery-1.11.0.js"></script>
 <script type="text/javascript" src="/JS/fb.js"></script>
+<script type="text/javascript" src="effects.js"></script>
 
 <title>6un.ee</title>
 </head>
@@ -21,11 +21,11 @@
 <div id="header">
   <div id="header-content">
     <h1 id="logo-text"><a href="pealeht.html" title="">6un.ee</a></h1>
-    <h2 id="slogan">Kokaraamat alati käepärast</h2>
+    <h2 id="slogan">Kokaraamat alati kÃ¤epÃ¤rast</h2>
     <div id="header-links">
 		<form action="http://all-free-download.com/free-website-templates/" class="searchform">
           <p>
-            <input name="search_query" class="textbox" type="text" />
+            <input name="search_query" onfocus="searchFocus(this)" onblur="loseFocus(this)" class="textbox" type="text" />
             <input name="search" class="button" value="Otsi" type="submit" />
           </p>
         </form>
@@ -53,7 +53,7 @@
 
 <div id="content-wrap">
   <div id="content">
-	<!-- Parem poolne külje riba -->
+	<!-- Parem poolne kÃ¼lje riba -->
     <div id="sidebar" >
       <div class="sep"></div>
       <div class="sidebox">
@@ -61,7 +61,7 @@
         <ul class="sidemenu">
           <li><a>Raamatuid: </a></li>
           <li><a>Retsepte: </a></li>
-          <li><a>Liitumiskuupäev: </a></li>
+          <li><a>LiitumiskuupÃ¤ev: </a></li>
         </ul>
       </div>
     </div>
@@ -83,7 +83,7 @@
 				<p><img src="http://www.ersen.ee/media/catalog/product/cache/1/image/5e06319eda06f020e43594a9c230972d/f/i/file_18_124.jpg" 
 					alt="" class="raamat"/>
 			
-				<a href="index.html">Õuna ahvatlused</a><br/>
+				<a href="index.html">Ã•una ahvatlused</a><br/>
 				Autor: <a href="index.html">Olwen Woodier</a><br/>
 				ISBN: <a href="index.html">9789949252312</a><br/>
 				<br/>
@@ -102,11 +102,11 @@
 <div id="footer-wrap">
   <div id="footer-bottom">
     <p> &copy; 2014 <a>Kasutajad</a> | 
-      <a href="">Privaatsus</a> | 
+      <a href="valesti.html">Privaatsus</a> | 
       <a href="meist.html">Meist</a> | 
 	  <a href="kontakt.html">Kontakt</a> | 
-	  <a href="">Facebook</a>&nbsp;|&nbsp; 
-	  <a href="">Twitter</a> </p>
+	  <a href="valesti.html">Facebook</a>&nbsp;|&nbsp; 
+	  <a href="valesti.html">Twitter</a> </p>
   </div>
   <!-- footer ends-->
 </div>
