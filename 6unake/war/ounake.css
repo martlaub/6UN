@@ -68,6 +68,7 @@ img.cookbook {
 }
 
 
+
 acronym {
   cursor: help;
   border-bottom: 1px solid #0065C6;
@@ -208,7 +209,19 @@ can turn it into a fixed width layout by setting a pixel value to the width (e.g
 	margin: 0; padding: 0;
 	
 	/* change the values of left and top to adjust the position of the slogan */
-	top: 100px; left: 125px;
+	top: 100px; left: 50px;
+}
+
+#header-content #pic {
+	position: absolute;	
+	border: none;
+	margin: 0; padding: 0;
+	background: transparent;
+	height: 100px;
+    width: 508px;
+    float: left;
+	/* change the values of left and top to adjust the position of the picture */
+	top: 25px; left: 275px;
 }
 
 /* header links */

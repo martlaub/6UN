@@ -20,13 +20,14 @@
 <!-- header starts here -->
 <div id="header">
   <div id="header-content">
-    <h1 id="logo-text"><a href="pealeht.html" title="">6un.ee</a></h1>
+    <h1 id="logo-text"><a href="pealeht.html" title="" onmousemove="searchOver(this)" onmouseout="searchOut(this)">6un.ee</a></h1>
     <h2 id="slogan">Kokaraamat alati käepärast</h2>
+    <img id="pic" src="images/kook.jpg" alt="" />
     <div id="header-links">
-		<form action="http://all-free-download.com/free-website-templates/" class="searchform">
+		<form action="" class="searchform">
           <p>
             <input name="search_query" onfocus="searchFocus(this)" onblur="loseFocus(this)" class="textbox" type="text" />
-            <input name="search" class="button" value="Otsi" type="submit" />
+            <input name="search" onmousemove="searchOver(this)" onmouseout="searchOut(this)" class="button" value="Otsi" type="submit"  />
           </p>
         </form>
         <div class="fb-login-button" data-max-rows="1" data-size="medium" 

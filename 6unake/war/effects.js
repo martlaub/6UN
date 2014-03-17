@@ -30,10 +30,40 @@ function contactOut(obj)
 
 function searchFocus(x) //otsi välja taustavärvi muutmine
 {
-x.style.background="yellow";
+x.style.background="#FFCC66";
 }
 
 function loseFocus(x) //otsi välja taustavärvi muutmine
 {
 x.style.background="white";
 }
+
+
+function searchOver(obj) //otsingunupp ja logo
+{
+ 	obj.style.color="black";
+
+}
+
+function searchOut(obj) //otsingunupp
+{
+ 	obj.style.color="white";
+
+}
+
+
+function bookOver(obj) //raamatu pilt
+{
+ 	obj.style.border="1px solid black";
+
+}
+
+function bookOut(obj) //raamatu pilt
+{
+	obj.style.border="none";
+
+}
+
+
+
+
