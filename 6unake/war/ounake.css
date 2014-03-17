@@ -49,7 +49,7 @@ ul, ol {
 
 /* images */
 img.raamat {
-	border: none; 
+	border: 1px solid transparent; 
 	padding: 0 0 5px 0;
 	margin: .5em 1em 1em 0;
 	background: transparent;
