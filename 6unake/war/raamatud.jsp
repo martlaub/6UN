@@ -1,3 +1,9 @@
+<%@ page contentType="text/html; charset=UTF-8" language="java" %>
+<%@ page import="java.util.List" %>
+<%@ page import="java.sql.*" %>
+<%@ page import="com.google.appengine.api.utils.SystemProperty" %>
+
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
 <head>
@@ -13,11 +19,32 @@
 <script type="text/javascript" src="/JS/fb.js"></script>
 <script type="text/javascript" src="/JS/effects.js"></script>
 
+
 <title>6un.ee</title>
 </head>
 <body onload="picChanger()">
+
+<%
+String url = null;
+if (SystemProperty.environment.value() ==
+    SystemProperty.Environment.Value.Production) {
+  // Load the class that provides the new "jdbc:google:mysql://" prefix.
+  Class.forName("com.mysql.jdbc.GoogleDriver");
+  url = "jdbc:google:mysql://ounake-app:oun/oun?user=root";
+} else {
+  // Local MySQL instance to use during development.
+  Class.forName("com.mysql.jdbc.Driver");
+  url = "jdbc:mysql://127.0.0.1:3306/oun?user=root";
+}
+
+Connection conn = DriverManager.getConnection(url);
+ResultSet rs = conn.createStatement().executeQuery(
+    "SELECT bookID, bookName, author, pildiURL, ISBN FROM books");
+%>
+
+
 <div id="fb-root"></div>
-<!-- header starts here -->
+<!-- header starts here --> 
 <div id="header">
   <div id="header-content">
     <h1 id="logo-text"><a href="pealeht.html" title="" onmousemove="searchOver(this)" onmouseout="searchOut(this)">6un.ee</a></h1>
@@ -40,39 +67,80 @@
   <div id="nav">
     <ul>
       <li><a href="pealeht.html">Pealeht</a></li>
-      <li><a href="raamatud.jsp">Raamatud</a></li>
-      <li id="current"><a href="meist.html">Meist</a></li>
+      <li id="current"><a href="raamatud.html">Raamatud</a></li>
+      <li><a href="meist.html">Meist</a></li>
       <li><a href="kontakt.html">Kontakt</a></li>
       <li><a href="_unake.html">MINU RIIUL</a></li>
     </ul>
   </div>
 </div>
 
-<!-- navigation starts here (MINU RIIUL) -->
+<!-- navigation starts here  -->
 
 
 
 <div id="content-wrap">
   <div id="content">
+	<!-- Parem poolne kÃ¼lje riba -->
+    <div id="sidebar" >
 
+    </div> 
+	
+	<!-- Main -->
     <div id="main">
       <div class="box">
-		<div id="nav-wrapsub">
+		<div id="nav-wrapsub">	
+		<div id="nav-sub">
+			
+			</div>
 		</div>
-			<h3>Kes me oleme ja mis veebirakendus on 6un.ee?</h3>
 
-      <br />
-      <p>Meie kolmeliikmelises tiimis on Karin, Kadi ja Liis. 6un.ee on rakendus, mis võimaldab koduste retseptiraamatute retsepte mugavalt kasutada. </p>
+<%
+while (rs.next()) {
+    String bookName = rs.getString("bookName");
+    String author = rs.getString("author");
+    String ISBN = rs.getString("ISBN");
+    String pildiURL = rs.getString("pildiURL");
+    int id = rs.getInt("bookID");
+ %>
+
+<p><img src="<%= pildiURL %>" 
+					alt="" class="raamat" onmousemove="bookOver(this)" onmouseout="bookOut(this)"/>
+			
+				<a href="index.html"><%= bookName %></a><br/>
+				Autor: <a href="index.html"><%= author %></a><br/>
+				ISBN: <a href="index.html"><%= ISBN %></a><br/>
+				<br/>
+				<input name="add" onclick="mUp(this)" class="button" value="Lisa minu riiulisse!" type="submit" />		
+
+
+				<br/>
+				<br/>
+
+				</p>
+				
+				<br/>
+				<br/>
+
+<%
+}
+conn.close();
+%>
+
+
+				
+			</div>
+			
 		</div>
     </div>
 	
     <!-- content-wrap ends here -->
   </div>
-</div>
+<div/>
 <!-- footer starts here-->
 <div id="footer-wrap">
   <div id="footer-bottom">
-    <p> &copy; 2014 <a href = "valesti.html">Kasutajad</a> | 
+    <p> &copy; 2014 <a>Kasutajad</a> | 
       <a href="valesti.html">Privaatsus</a> | 
       <a href="meist.html">Meist</a> | 
 	  <a href="kontakt.html">Kontakt</a> | 
