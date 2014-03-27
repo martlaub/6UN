@@ -39,7 +39,7 @@ if (SystemProperty.environment.value() ==
 
 Connection conn = DriverManager.getConnection(url);
 ResultSet rs = conn.createStatement().executeQuery(
-    "SELECT bookID, bookName, author, pildiURL, ISBN FROM books;");
+    "SELECT COUNT(*), books.bookID, books.bookName, books.author, books.pildiURL, books.ISBN FROM books INNER JOIN recipes ON books.bookID=recipes.bookID GROUP BY books.bookID, books.bookName, books.author, books.pildiURL, books.ISBN;");
     
 //raamatute arv kokku
 
@@ -120,6 +120,7 @@ while (rs.next()) {
     String ISBN = rs.getString("ISBN");
     String pildiURL = rs.getString("pildiURL");
     int id = rs.getInt("bookID");
+    int retsepte = rs.getInt(1);
  %>
 
 <p><img src="<%= pildiURL %>" 
@@ -128,6 +129,7 @@ while (rs.next()) {
 				<a href="index.html"><%= bookName %></a><br/>
 				Autor: <%= author %><br/>
 				ISBN: <%= ISBN %><br/>
+				Retsepte: <%= retsepte %><br/>
 				<br/>
 				<input name="add" onclick="mUp(this)" class="button" value="Lisa minu riiulisse!" type="submit" />		
 
