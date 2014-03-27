@@ -126,8 +126,8 @@ while (rs.next()) {
 					alt="" class="raamat" onmousemove="bookOver(this)" onmouseout="bookOut(this)"/>
 
 				<a href="index.html"><%= bookName %></a><br/>
-				Autor: <%= author %></a><br/>
-				ISBN: <%= ISBN %></a><br/>
+				Autor: <%= author %><br/>
+				ISBN: <%= ISBN %><br/>
 				<br/>
 				<input name="add" onclick="mUp(this)" class="button" value="Lisa minu riiulisse!" type="submit" />		
 
