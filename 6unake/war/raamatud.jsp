@@ -39,7 +39,21 @@ if (SystemProperty.environment.value() ==
 
 Connection conn = DriverManager.getConnection(url);
 ResultSet rs = conn.createStatement().executeQuery(
-    "SELECT bookID, bookName, author, pildiURL, ISBN FROM books");
+    "SELECT bookID, bookName, author, pildiURL, ISBN FROM books;");
+    
+//raamatute arv kokku
+
+ResultSet rs4 = conn.createStatement().executeQuery(
+    "SELECT COUNT(bookID) FROM books;");
+    rs4.next();
+    int booksNumber = rs4.getInt(1);
+    
+//retseptide arv kokku
+ResultSet rs2 = conn.createStatement().executeQuery(
+    "SELECT COUNT(recipeID) FROM recipes;");
+    rs2.next();
+    int resNumber = rs2.getInt(1);
+    
 %>
 
 
@@ -76,29 +90,26 @@ ResultSet rs = conn.createStatement().executeQuery(
 </div>
 
 <!-- navigation starts here  -->
-
-
-
 <div id="content-wrap">
   <div id="content">
 	<!-- Parem poolne kÃ¼lje riba -->
     <div id="sidebar" >
 <div class="sep"></div>
-      <div class="sidebox">
+<div class="sidebox">
         <h1>Statistika</h1>
         <ul class="sidemenu">
-          <li><a>Raamatuid: </a></li>
-          <li><a>Retsepte: </a></li>
+          <li><a>Raamatuid: <%= booksNumber %></a></li>
+          <li><a>Retsepte: <%= resNumber %></a></li>
         </ul>
       </div>
     </div> 
-	
+
 	<!-- Main -->
     <div id="main">
       <div class="box">
 		<div id="nav-wrapsub">	
 		<div id="nav-sub">
-			
+
 			</div>
 		</div>
 
@@ -113,10 +124,10 @@ while (rs.next()) {
 
 <p><img src="<%= pildiURL %>" 
 					alt="" class="raamat" onmousemove="bookOver(this)" onmouseout="bookOut(this)"/>
-			
+
 				<a href="index.html"><%= bookName %></a><br/>
-				Autor:<%= author %></a><br/>
-				ISBN:<%= ISBN %></a><br/>
+				Autor: <%= author %></a><br/>
+				ISBN: <%= ISBN %></a><br/>
 				<br/>
 				<input name="add" onclick="mUp(this)" class="button" value="Lisa minu riiulisse!" type="submit" />		
 
@@ -125,7 +136,7 @@ while (rs.next()) {
 				<br/>
 
 				</p>
-				
+
 				<br/>
 				<br/>
 
@@ -135,12 +146,12 @@ conn.close();
 %>
 
 
-				
+
 			</div>
-			
+
 		</div>
     </div>
-	
+
     <!-- content-wrap ends here -->
   </div>
 <div/>
