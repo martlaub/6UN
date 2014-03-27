@@ -67,7 +67,7 @@ ResultSet rs = conn.createStatement().executeQuery(
   <div id="nav">
     <ul>
       <li><a href="pealeht.html">Pealeht</a></li>
-      <li id="current"><a href="raamatud.html">Raamatud</a></li>
+      <li id="current"><a href="raamatud.jsp">Raamatud</a></li>
       <li><a href="meist.html">Meist</a></li>
       <li><a href="kontakt.html">Kontakt</a></li>
       <li><a href="_unake.html">MINU RIIUL</a></li>
@@ -83,7 +83,14 @@ ResultSet rs = conn.createStatement().executeQuery(
   <div id="content">
 	<!-- Parem poolne kÃ¼lje riba -->
     <div id="sidebar" >
-
+<div class="sep"></div>
+      <div class="sidebox">
+        <h1>Statistika</h1>
+        <ul class="sidemenu">
+          <li><a>Raamatuid: </a></li>
+          <li><a>Retsepte: </a></li>
+        </ul>
+      </div>
     </div> 
 	
 	<!-- Main -->
@@ -108,8 +115,8 @@ while (rs.next()) {
 					alt="" class="raamat" onmousemove="bookOver(this)" onmouseout="bookOut(this)"/>
 			
 				<a href="index.html"><%= bookName %></a><br/>
-				Autor: <a href="index.html"><%= author %></a><br/>
-				ISBN: <a href="index.html"><%= ISBN %></a><br/>
+				Autor:<%= author %></a><br/>
+				ISBN:<%= ISBN %></a><br/>
 				<br/>
 				<input name="add" onclick="mUp(this)" class="button" value="Lisa minu riiulisse!" type="submit" />		
 
