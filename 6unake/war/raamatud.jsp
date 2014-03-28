@@ -26,18 +26,21 @@
 
 <%
 String url = null;
+Connection conn=null;
 if (SystemProperty.environment.value() ==
     SystemProperty.Environment.Value.Production) {
   // Load the class that provides the new "jdbc:google:mysql://" prefix.
   Class.forName("com.mysql.jdbc.GoogleDriver");
   url = "jdbc:google:mysql://ounake-app:oun/oun?user=root";
+  conn = DriverManager.getConnection(url);
 } else {
   // Local MySQL instance to use during development.
   Class.forName("com.mysql.jdbc.Driver");
-  url = "jdbc:mysql://127.0.0.1:3306/oun?user=root";
+  url = "jdbc:mysql://127.0.0.1:3306/oun";
+  conn = DriverManager.getConnection(url,
+    "root", "YOURPASS");
 }
 
-Connection conn = DriverManager.getConnection(url);
 ResultSet rs = conn.createStatement().executeQuery(
     "SELECT COUNT(*), books.bookID, books.bookName, books.author, books.pildiURL, books.ISBN FROM books INNER JOIN recipes ON books.bookID=recipes.bookID GROUP BY books.bookID, books.bookName, books.author, books.pildiURL, books.ISBN;");
     
