@@ -87,7 +87,7 @@ ResultSet rs2 = conn.createStatement().executeQuery(
       <li id="current"><a href="raamatud.jsp">Raamatud</a></li>
       <li><a href="meist.html">Meist</a></li>
       <li><a href="kontakt.html">Kontakt</a></li>
-      <li><a href="_unake.html">MINU RIIUL</a></li>
+      <li id="peida"><a href="_unake.html">MINU RIIUL</a></li>
     </ul>
   </div>
 </div>
