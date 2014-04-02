@@ -4,6 +4,8 @@
 <%@ page import="com.google.appengine.api.utils.SystemProperty" %>
 
 
+
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
 <head>
@@ -18,6 +20,7 @@
 <script type="text/javascript" src="/JS/jquery-1.11.0.js"></script>
 <script type="text/javascript" src="/JS/fb.js"></script>
 <script type="text/javascript" src="/JS/effects.js"></script>
+<script type="text/javascript" src="/JS/ajax.js"></script>
 
 
 <title>6un.ee</title>
@@ -43,7 +46,8 @@ if (SystemProperty.environment.value() ==
 
 ResultSet rs = conn.createStatement().executeQuery(
     "SELECT COUNT(*), books.bookID, books.bookName, books.author, books.pildiURL, books.ISBN FROM books INNER JOIN recipes ON books.bookID=recipes.bookID GROUP BY books.bookID, books.bookName, books.author, books.pildiURL, books.ISBN;");
-    
+
+
 //raamatute arv kokku
 
 ResultSet rs4 = conn.createStatement().executeQuery(
@@ -65,7 +69,7 @@ ResultSet rs2 = conn.createStatement().executeQuery(
 <div id="header">
   <div id="header-content">
     <h1 id="logo-text"><a href="pealeht.html" title="" onmousemove="searchOver(this)" onmouseout="searchOut(this)">6un.ee</a></h1>
-    <h2 id="slogan">Kokaraamat alati käepärast</h2>
+    <h2 id="slogan">Kokaraamat alati kĆ¤epĆ¤rast</h2>
     <img id="pic" src="images/kook.jpg" alt="" />
     <div id="header-links">
 		<form action="" class="searchform">
@@ -95,7 +99,7 @@ ResultSet rs2 = conn.createStatement().executeQuery(
 <!-- navigation starts here  -->
 <div id="content-wrap">
   <div id="content">
-	<!-- Parem poolne kÃ¼lje riba -->
+	<!-- Parem poolne kĆ�Ā¼lje riba -->
     <div id="sidebar" >
 <div class="sep"></div>
 <div class="sidebox">
@@ -126,10 +130,10 @@ while (rs.next()) {
     int retsepte = rs.getInt(1);
  %>
 
-<p><img src="<%= pildiURL %>" 
+<p id="raam"><img src="<%= pildiURL %>" 
 					alt="" class="raamat" onmousemove="bookOver(this)" onmouseout="bookOut(this)"/>
 
-				<a href="index.html"><%= bookName %></a><br/>
+				<a id="pealkiri" onclick="laeRaamat(<%=id%>)" href="#"><%= bookName %></a><br/>
 				Autor: <%= author %><br/>
 				ISBN: <%= ISBN %><br/>
 				Retsepte: <%= retsepte %><br/>
