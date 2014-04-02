@@ -286,6 +286,9 @@ can turn it into a fixed width layout by setting a pixel value to the width (e.g
 #nav ul li#current a {
 	color: #333;
 }
+#peida{
+	display: none;
+}
 
 /* Submenu */
 #nav-wrapsub {
