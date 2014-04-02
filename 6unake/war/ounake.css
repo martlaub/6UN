@@ -67,7 +67,12 @@ img.cookbook {
     height: auto;
 }
 
-
+/*facebooke nupp*/
+img.fb-button {
+	cursor:  pointer;
+	width: 10em;
+	display: block;
+}
 
 acronym {
   cursor: help;
@@ -289,7 +294,6 @@ can turn it into a fixed width layout by setting a pixel value to the width (e.g
 #peida{
 	display: none;
 }
-
 /* Submenu */
 #nav-wrapsub {
 	float: left;
