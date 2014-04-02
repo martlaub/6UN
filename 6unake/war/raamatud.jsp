@@ -122,7 +122,7 @@ ResultSet rs2 = conn.createStatement().executeQuery(
 
 			</div>
 		</div>
-
+<div id = "raam">
 <%
 while (rs.next()) {
     String bookName = rs.getString("bookName");
@@ -132,7 +132,7 @@ while (rs.next()) {
     int id = rs.getInt("bookID");
     int retsepte = rs.getInt(1);
  %>
-<div id = "raam">
+<!--<div id = "raam">-->
 <p><img src="<%= pildiURL %>" 
 					alt="" class="raamat" onmousemove="bookOver(this)" onmouseout="bookOut(this)"/>
 
@@ -167,7 +167,7 @@ conn.close();
 
     <!-- content-wrap ends here -->
   </div>
-<div/>
+<!--<div/>-->
 <!-- footer starts here-->
 <div id="footer-wrap">
   <div id="footer-bottom">
