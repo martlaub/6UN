@@ -129,11 +129,11 @@ while (rs.next()) {
     int id = rs.getInt("bookID");
     int retsepte = rs.getInt(1);
  %>
-
-<p id="raam"><img src="<%= pildiURL %>" 
+<div id = "raam">
+<p><img src="<%= pildiURL %>" 
 					alt="" class="raamat" onmousemove="bookOver(this)" onmouseout="bookOut(this)"/>
 
-				<a id="pealkiri" onclick="laeRaamat(<%=id%>)" href="#"><%= bookName %></a><br/>
+				<a onclick="laeRaamat(<%=id%>)" href="#"><%= bookName %></a><br/>
 				Autor: <%= author %><br/>
 				ISBN: <%= ISBN %><br/>
 				Retsepte: <%= retsepte %><br/>
@@ -148,6 +148,7 @@ while (rs.next()) {
 
 				<br/>
 				<br/>
+				</div>
 
 <%
 }
