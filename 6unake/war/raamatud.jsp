@@ -69,7 +69,7 @@ ResultSet rs2 = conn.createStatement().executeQuery(
 <div id="header">
   <div id="header-content">
     <h1 id="logo-text"><a href="pealeht.html" title="" onmousemove="searchOver(this)" onmouseout="searchOut(this)">6un.ee</a></h1>
-    <h2 id="slogan">Kokaraamat alati kĆ¤epĆ¤rast</h2>
+    <h2 id="slogan">Kokaraamat alati käepärast</h2>
     <img id="pic" src="images/kook.jpg" alt="" />
     <div id="header-links">
 		<form action="" class="searchform">
@@ -122,7 +122,7 @@ ResultSet rs2 = conn.createStatement().executeQuery(
 
 			</div>
 		</div>
-<div id = "raam">
+
 <%
 while (rs.next()) {
     String bookName = rs.getString("bookName");
@@ -151,7 +151,7 @@ while (rs.next()) {
 
 				<br/>
 				<br/>
-				</div>
+				
 
 <%
 }
