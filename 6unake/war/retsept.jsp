@@ -17,9 +17,9 @@ if (SystemProperty.environment.value() ==
 } else {
   // Local MySQL instance to use during development.
   Class.forName("com.mysql.jdbc.Driver");
-  url = "jdbc:mysql://127.0.0.1:3307/oun";
+  url = "jdbc:mysql://127.0.0.1:3306/oun";
   conn = DriverManager.getConnection(url,
-    "root", "ounake");
+    "root", "yourpass");
  
 }
 String bkid = request.getParameter("id");

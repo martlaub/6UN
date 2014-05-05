@@ -3,9 +3,6 @@
 <%@ page import="java.sql.*" %>
 <%@ page import="com.google.appengine.api.utils.SystemProperty" %>
 
-
-
-
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
 <head>
@@ -39,9 +36,9 @@ if (SystemProperty.environment.value() ==
 } else {
   // Local MySQL instance to use during development.
   Class.forName("com.mysql.jdbc.Driver");
-  url = "jdbc:mysql://127.0.0.1:3307/oun";
+  url = "jdbc:mysql://127.0.0.1:3306/oun";
   conn = DriverManager.getConnection(url,
-    "root", "ounake");
+    "root", "yourpass");
 }
 
 ResultSet rs = conn.createStatement().executeQuery(
@@ -157,10 +154,23 @@ while (rs.next()) {
 }
 conn.close();
 %>
+<p><strong>Palun anna meile teada, milliseid raamatuid sooviksid veel siin näha!</strong></p>
+<form action="/ounserv" method="post" class="form">
+
+<div>Pealkiri: 
+<br /><input type="text" name="name"></input></div>
+<div>Autor:
+<br /> <input type="text" name="author"></input></div>
+ <div><input type="submit" class="button" value="Lisa soov!" /></div>
+
+  
+ 
+  
+  </form>
+</div>
 
 
-
-			</div>
+			
 
 		</div>
     </div>
