@@ -3,14 +3,11 @@
 <%@ page import="java.sql.*" %>
 <%@ page import="com.google.appengine.api.utils.SystemProperty" %>
 
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 5.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
 <head>
+<meta charset="UTF-8">
 <meta name="Description" content="Information architecture, Web Design, Web Standards." />
-<meta name="Keywords" content="your, keywords" />
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-<meta name="Distribution" content="Global" />
-<meta name="Robots" content="index,follow" />
 
 <link rel="stylesheet" href="ounake.css" type="text/css" />
 
@@ -69,7 +66,7 @@ ResultSet rs2 = conn.createStatement().executeQuery(
     <h2 id="slogan">Kokaraamat alati käepärast</h2>
     <img id="pic" src="images/kook.jpg" alt="" />
     <div id="header-links">
-		<form action="" class="searchform">
+		<form action="#" class="searchform">
           <p>
             <input name="search_query" onfocus="searchFocus(this)" onblur="loseFocus(this)" class="textbox" type="text" />
             <input name="search" onmousemove="searchOver(this)" onmouseout="searchOut(this)" class="button" value="Otsi" type="submit"  />
@@ -77,7 +74,7 @@ ResultSet rs2 = conn.createStatement().executeQuery(
         </form>
         
         <div id="status">
-		<img class="fb-button" src="images/LoginWithFacebook.png" onclick="Login()" alt=""></img>
+		<img class="fb-button" src="images/LoginWithFacebook.png" onclick="Login()" alt=""/>
 		</div>        
 
     </div>
@@ -158,9 +155,9 @@ conn.close();
 <form action="/ounserv" method="post" class="form">
 
 <div>Pealkiri: 
-<br /><input type="text" name="name"></input></div>
+<br /><input type="text" name="name"/></div>
 <div>Autor:
-<br /> <input type="text" name="author"></input></div>
+<br /> <input type="text" name="author"/></div>
  <div><input type="submit" class="button" value="Lisa soov!" /></div>
 
   
