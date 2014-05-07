@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head profile="http://selenium-ide.openqa.org/profiles/test-case">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="selenium.base" href="http://ounake-app.appspot.com/" />
+<title>New Test</title>
+</head>
+<body>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">New Test</td></tr>
+</thead><tbody>
+<!---->
+<!--Sisse logimine ja välja logimis nupu kontroll-->
+<tr>
+	<td>open</td>
+	<td>/pealeht.html</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=img.fb-button</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=email</td>
+	<td>open_agglwpi_user@tfbnw.net</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=pass</td>
+	<td>testuser</td>
+</tr>
+<tr>
+	<td>clickAt</td>
+	<td>id=u_0_1</td>
+	<td></td>
+</tr>
+<tr>
+	<td>close</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/</td>
+	<td></td>
+</tr>
+<tr>
+	<td>selectWindow</td>
+	<td>null</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>css=#status &gt; img</td>
+	<td></td>
+</tr>
+<!--Sisse logides on minu riiul nähtav-->
+<tr>
+	<td>assertVisible</td>
+	<td>link=MINU RIIUL</td>
+	<td></td>
+</tr>
+<tr>
+	<td></td>
+	<td></td>
+	<td></td>
+</tr>
+<!--Minu riiul nähtav, kui sisse logitud - autoriseerimine-->
+<tr>
+	<td>verifyElementPresent</td>
+	<td>css=#status &gt; img</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertVisible</td>
+	<td>link=MINU RIIUL</td>
+	<td></td>
+</tr>
+<tr>
+	<td></td>
+	<td></td>
+	<td></td>
+</tr>
+<!--Välja logimine-->
+<tr>
+	<td>click</td>
+	<td>css=#status &gt; img</td>
+	<td>login</td>
+</tr>
+<tr>
+	<td></td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td></td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td></td>
+	<td></td>
+	<td></td>
+</tr>
+</tbody></table>
+</body>
+</html>
