@@ -12,26 +12,27 @@
 
 <title>6un.ee</title>
 </head>
-<body onload="picChanger()">
+<body>
 <div id="fb-root"></div>
-<!-- header starts here -->
+<!-- header starts here --> 
 <div id="header">
   <div id="header-content">
-    <h1 id="logo-text" ><a href="pealeht.html" title="" onmousemove="searchOver(this)" onmouseout="searchOut(this)">6un.ee</a></h1>
+    <h1 id="logo-text"><a href="pealeht.html" title="" onmousemove="searchOver(this)" onmouseout="searchOut(this)">6un.ee</a></h1>
     <h2 id="slogan">Kokaraamat alati käepärast</h2>
     <img id="pic" src="images/kook.jpg" alt="" />
     <div id="header-links">
+     
 		<form action="#" class="searchform">
           <p>
             <input name="search_query" onfocus="searchFocus(this)" onblur="loseFocus(this)" class="textbox" type="text" />
-            <input name="search" onmousemove="searchOver(this)" onmouseout="searchOut(this)" class="button" value="Otsi" type="submit"  />
+            <input name="search" onmousemove="searchOver(this)" onmouseout="searchOut(this)" class="button" value="Otsi" type="submit"  />  
           </p>
         </form>
-       
-       <div id="status">
+        
+        <div id="status">
 		<img class="fb-button" src="images/LoginWithFacebook.png" onclick="Login()" alt=""/>
-		</div>
-		
+		</div>        
+
     </div>
   </div>
 </div>
@@ -43,67 +44,49 @@
       <li><a href="raamatud.jsp">Raamatud</a></li>
       <li><a href="meist.html">Meist</a></li>
       <li><a href="kontakt.html">Kontakt</a></li>
-      <li id="current"><a href="_unake.html">MINU RIIUL</a></li>
+      <li id="peida"><a href="_unake.html">MINU RIIUL</a></li>
     </ul>
   </div>
 </div>
 
-<!-- navigation starts here (MINU RIIUL) -->
+<!-- navigation starts here  -->
 
 
 
 <div id="content-wrap">
   <div id="content">
-	<!-- Parem poolne külje riba -->
+	<!-- Parem poolne kÃ¼lje riba -->
     <div id="sidebar" >
-      <div class="sep"></div>
-      <div class="sidebox">
-        <h1>Kasutaja</h1>
-        <ul class="sidemenu">
-          <li><a>Raamatuid: </a></li>
-          <li><a>Retsepte: </a></li>
-          <li><a>Liitumiskuupäev: </a></li>
-        </ul>
-      </div>
-    </div>
+     
+        <img src="images/study.jpeg" 
+					alt="" class="cookbooks"/>
+     
+    </div> 
 	
 	<!-- Main -->
     <div id="main">
       <div class="box">
 		<div id="nav-wrapsub">
 			<div id="nav-sub">
-				<ul>
-					<li id="currentsub"><a href="_unake.html">Minu raamatud</a></li>
-					<li><a href="retseptid.html">Minu retseptid</a></li>
-				</ul>
+			
 			</div>
 		</div>
-	  
-	  
-	  
-				<p><img src="http://www.ersen.ee/media/catalog/product/cache/1/image/5e06319eda06f020e43594a9c230972d/f/i/file_18_124.jpg" 
-					alt="" class="raamat" onmousemove="bookOver(this)" onmouseout="bookOut(this)"/>
-			
-				<a href="index.html">Õuna ahvatlused</a><br/>
-				Autor: <a href="index.html">Olwen Woodier</a><br/>
-				ISBN: <a href="index.html">9789949252312</a><br/>
-				<br/>
-				<br/>
-				<br/>
+				<p>
+				Antud lehekülg on koostatud õppe eesmärgil aine "Veebirakenduste loomine" raames!
 				</p>
 			</div>
 			
 		</div>
     </div>
 	
-    <!-- content-wrap ends here -->  
+    <!-- content-wrap ends here -->
   </div>
 
-<!-- footer starts here--> 
+<!-- footer starts here-->
 <div id="footer-wrap">
   <div id="footer-bottom">
     <p> &copy; 2014 <a>Kasutajad</a> | 
-      <a href="privaatsus.html">Privaatsus</a> | 
+    <a href="privaatsus.html">Privaatsus</a> | 
       <a href="meist.html">Meist</a> | 
 	  <a href="kontakt.html">Kontakt</a> | 
 	  <a href="https://www.facebook.com/">Facebook</a>&nbsp;|&nbsp; 

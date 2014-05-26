@@ -15,6 +15,7 @@
 <script type="text/javascript" src="/JS/fb.js"></script>
 <script type="text/javascript" src="/JS/effects.js"></script>
 <script type="text/javascript" src="/JS/ajax.js"></script>
+<script type="text/javascript" src="/JS/jquery.ba-hashchange.js"></script>
 
 
 <title>6un.ee</title>
@@ -130,7 +131,7 @@ while (rs.next()) {
 <p><img src="<%= pildiURL %>" 
 					alt="" class="raamat" onmousemove="bookOver(this)" onmouseout="bookOut(this)"/>
 
-				<a onclick="laeRaamat(<%=id%>)" href="#"><%= bookName %></a><br/>
+				<a onclick="laeRaamat(<%=id%>)" href="#retsept"><%= bookName %></a><br/>
 				Autor: <%= author %><br/>
 				ISBN: <%= ISBN %><br/>
 				Retsepte: <%= retsepte %><br/>
@@ -179,11 +180,11 @@ conn.close();
 <div id="footer-wrap">
   <div id="footer-bottom">
     <p> &copy; 2014 <a>Kasutajad</a> | 
-      <a href="valesti.html">Privaatsus</a> | 
+     <a href="privaatsus.html">Privaatsus</a> | 
       <a href="meist.html">Meist</a> | 
 	  <a href="kontakt.html">Kontakt</a> | 
-	  <a href="valesti.html">Facebook</a>&nbsp;|&nbsp; 
-	  <a href="valesti.html">Twitter</a> </p>
+	  <a href="https://www.facebook.com/">Facebook</a>&nbsp;|&nbsp; 
+	  <a href="https://twitter.com/">Twitter</a> </p>
   </div>
   <!-- footer ends-->
 </div>
